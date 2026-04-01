@@ -62,9 +62,9 @@ pipeline {
                     echo Stopping previous preview server...
                     taskkill /F /IM node.exe /T 2>nul || echo No previous server running
                     echo Starting new preview server...
-                    start /B "C:\\Program Files\\nodejs\\npx.cmd" vite preview --port 4173
-                    timeout /T 5 /NOBREAK
-                    echo Preview server should be running on http://localhost:4173/
+                    start "" /B cmd /c "\"C:\\Program Files\\nodejs\\npx.cmd\" vite preview --port 4173 > vite-preview.log 2>&1"
+                    timeout /T 3 /NOBREAK
+                    echo Preview server running on http://localhost:4173/
                 '''
             }
         }
