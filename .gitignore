@@ -14,3 +14,22 @@ yarn-error.log*
 build_output.txt
 build_output2.txt
 vite.log
+
+# Docker
+.docker/
+docker-compose.override.yml
+.dockerignore
+
+# Pipeline logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.idea/
